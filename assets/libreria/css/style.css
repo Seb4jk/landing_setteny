@@ -1,0 +1,548 @@
+h1, h2, h3, h4, h5{
+    font-family: "Exo 2", sans-serif;
+    font-weight: weight;
+}
+
+p{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+}
+/* BODY */
+body {
+    background-color: #C8D1E8;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header .navbar.custom-navbar {
+    background-color: #666DB3;
+}
+
+header .navbar-nav .nav-link {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;            
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #88D9AA;            
+    transform: translateY(-2px); 
+}
+
+/* Logo más grande y responsivo */
+.logo-img {
+    max-height: 80px; 
+    width: auto;      
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        max-height: 60px; 
+    }
+}
+/* HEADER */
+
+.banner-full {
+    width: 100vw;       /* Ocupa todo el ancho de la ventana */
+    overflow: hidden;   /* Evita scroll si la imagen es más grande */
+}
+
+.banner-full img {
+    width: 100%;        /* La imagen ocupa todo el ancho del contenedor */
+    height: auto;       /* Mantiene proporciones */
+    display: block;     /* Elimina espacio abajo de la imagen */
+}
+
+
+/* SECCION NUESTRAS LINEAS DE NEGOCIO*/
+.full-width-gradient {
+    background: linear-gradient(to bottom, #C8D1E8 0%, #666DB3 100%);
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.business-section {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    margin-bottom: 3rem !important;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Estilos de las tarjetas */
+.business-card {
+    border: none;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.business-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.business-card:hover:before {
+    opacity: 1;
+}
+
+.card-icon-wrapper {
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    background-color: rgba(52, 152, 219, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.business-card:hover .card-icon-wrapper {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: grayscale(30%) brightness(0.9);
+    transition: all 0.4s ease;
+}
+
+.business-card:hover .card-icon {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.service-name {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #34495e;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.business-card:hover .service-name {
+    color: #2c3e50;
+}
+/* SECCION NUESTRAS LINEAS DE NEGOCIO*/
+
+.success-cases-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    margin-bottom: 3rem !important;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Tarjetas de casos de éxito */
+.success-card {
+    border: none;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.success-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los logos de clientes */
+.client-logo-box, .client-logos-box {
+    background-color: #D0E8FF;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.client-logos-box {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.client-logo {
+    max-width: 180px;
+    max-height: 100px;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+}
+
+.success-card:hover .client-logo {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Contenido del caso */
+.case-content {
+    padding: 2rem;
+}
+
+.case-description {
+    font-size: 1.05rem;
+    color: #495057;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+/* Testimonio */
+.client-testimonial {
+    background-color: #f1f8ff;
+    border-left: 4px solid #3498db;
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+}
+
+.testimonial-text:before {
+    content: '"';
+    font-size: 3rem;
+    color: #3498db;
+    opacity: 0.2;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+}
+
+@media (max-width: 768px) {
+    .success-card {
+        margin-bottom: 2rem;
+    }
+    
+    .client-logo-box, .client-logos-box {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .case-content {
+        padding: 1.5rem;
+    }
+}
+
+/* CASOS DE ÉXITO*/
+
+/*CLIENTES*/
+.client-card {
+    border: none;
+    border-radius: 10px;
+    background: #f8f9fa; /* Color claro para las tarjetas */
+    padding: 2rem;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background: #ffffff; /* Fondo blanco al hacer hover */
+}
+
+.client-logo {
+    max-width: 80%;
+    max-height: 80px;
+    object-fit: contain;
+    /*filter: grayscale(100%) opacity(85%);*/
+    transition: all 0.3s ease;
+}
+
+.client-card:hover .client-logo {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #6c757d;
+    margin: 1rem auto 0;
+    opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .client-card {
+        padding: 1.5rem;
+        height: 150px;
+    }
+    
+    .client-logo {
+        max-height: 60px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+/* CONTENIDO PRINCIPAL */
+
+.container,
+.container-fluid {
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: none;
+}
+
+/* DEGRADE*/
+.full-width-gradient {
+    background: linear-gradient(to bottom, #C8D1E8 0%, #666DB3 100%);
+    width: 100%;
+    padding: 4rem 0;
+}
+/* DEGRADE*/
+
+/* COLOR DE FONDO NUESTRA EXPERIENCIA EN LA INDUSTRIA*/
+.bg-experience {
+    background-color: #C6DBFF;
+    padding: 4rem 0; 
+    border-radius: 10px;
+}
+/* COLOR DE FONDO NUESTRA EXPERIENCIA EN LA INDUSTRIA*/
+
+/* FORMULARIO COLUMNA IZQUIERDA*/
+.contact-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    margin-bottom: 3rem !important;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #88D9AA;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Contenedor principal */
+.contact-container {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid #e9ecef;
+}
+
+/* Columna de información de contacto */
+.contact-info {
+    color: white;
+    border-radius: 8px;
+    padding: 2.5rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-details {
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.contact-info-col {
+    background: linear-gradient(135deg, #2c3e50, #1f2a38);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* columna centrada verticalmente */
+    text-align: left;    /* párrafos alineados a la izquierda */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.contact-content-wrapper {
+    max-width: 420px;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    color: #88D9AA;
+}
+
+/* Quitar subrayado a los enlaces de contacto */
+.contact-link {
+    text-decoration: none; /* quita subrayado */
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #88D9AA; /* efecto hover */
+}
+
+/* Centrar la imagen del logo */
+.company-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.company-logo img {
+    max-width: 220px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.company-logo img:hover {
+    transform: scale(1.05);
+}
+
+.submit-btn {
+    background-color: #88D9AA; /* color principal */
+    color: #ffffff;            /* texto blanco */
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #6bc797; /* color al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* FORMULARIO COLUMNA IZQUIERDA*/
+
+/* FOOTER */
+.footer-custom {
+    background-color: #666DB3; /* fondo oscuro */
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.footer-logo img {
+    height: 60px; /* imagen más grande */
+    width: auto;
+}
+
+.footer-text p {
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-custom .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+}
