@@ -385,37 +385,45 @@
                 <h5 class="fw-bold mb-4 form-title">Envíanos tus consultas, te asesoraremos lo más rápido que podamos
                 </h5>
 
-                <form id="contactForm" class="needs-validation" novalidate>
+                <form id="contactForm" class="needs-validation" data-netlify="true" name="contacto-setteny" method="POST" netlify-honeypot="bot-field" novalidate>
+                    <!-- Campo oculto para detectar bots -->
+                    <p class="hidden" style="display: none;">
+                        <label>No llenes esto si eres humano: <input name="bot-field" /></label>
+                    </p>
+                    
                     <div class="mb-3 form-group">
                         <label for="nombre" class="form-label">Nombre completo <span
                                 class="text-danger">*</span></label>
-                        <input type="text" id="nombre" class="form-control" placeholder="Escribe tu nombre" required>
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Escribe tu nombre" required>
                         <div class="invalid-feedback">Por favor ingresa tu nombre</div>
                     </div>
 
                     <div class="mb-3 form-group">
                         <label for="empresa" class="form-label">Empresa</label>
-                        <input type="text" id="empresa" class="form-control" placeholder="Nombre de tu empresa">
+                        <input type="text" id="empresa" name="empresa" class="form-control" placeholder="Nombre de tu empresa">
                     </div>
 
                     <div class="mb-3 form-group">
                         <label for="correo" class="form-label">Correo electrónico <span
                                 class="text-danger">*</span></label>
-                        <input type="email" id="correo" class="form-control" placeholder="ejemplo@correo.com" required>
+                        <input type="email" id="correo" name="correo" class="form-control" placeholder="ejemplo@correo.com" required>
                         <div class="invalid-feedback">Por favor ingresa un correo válido</div>
                     </div>
 
                     <div class="mb-3 form-group">
                         <label for="telefono" class="form-label">Número de celular</label>
-                        <input type="tel" id="telefono" class="form-control" placeholder="+56 9 1234 5678">
+                        <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+56 9 1234 5678">
                     </div>
 
                     <div class="mb-3 form-group">
                         <label for="asunto" class="form-label">Asunto <span class="text-danger">*</span></label>
-                        <textarea id="asunto" class="form-control" rows="3" placeholder="Escribe tu mensaje"
+                        <textarea id="asunto" name="asunto" class="form-control" rows="3" placeholder="Escribe tu mensaje"
                             required></textarea>
                         <div class="invalid-feedback">Por favor escribe tu mensaje</div>
                     </div>
+                    
+                    <!-- Campo oculto para la redirección después del envío -->
+                    <input type="hidden" name="form-name" value="contacto-setteny">
 
                     <button type="submit" class="btn submit-btn mt-3">Enviar Mensaje</button>
                 </form>

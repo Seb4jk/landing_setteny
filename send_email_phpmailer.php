@@ -60,7 +60,7 @@ try {
     
     // Destinatarios
     $mail->setFrom('formularioweb@setteny.cl', 'Formulario Web Setteny Consulting');
-    $mail->addAddress('contacto@settenyconsulting.cl');   // Añadir destinatario
+    $mail->addAddress('formularioweb@setteny.cl');   // Añadir destinatario
     $mail->addReplyTo($correo, $nombre);                  // Responder a
     
     // Contenido

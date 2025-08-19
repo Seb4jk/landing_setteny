@@ -28,7 +28,7 @@ $telefono = isset($data["telefono"]) ? $data["telefono"] : "No especificado";
 $mensaje = $data["asunto"];
 
 // Configuración de correo
-$to = "contacto@setteny.cl"; // Reemplaza con tu dirección de correo
+$to = "formularioweb@setteny.cl"; // Reemplaza con tu dirección de correo
 $subject = "Nuevo mensaje de contacto desde el sitio web";
 
 // Crear el cuerpo del mensaje
