@@ -2,17 +2,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Obtener el formulario
     const contactForm = document.getElementById('contactForm');
     
+    // Verificar si estamos en Netlify (para usar Netlify Forms)
+    const isNetlify = window.location.hostname.includes('netlify.app') || 
+                     window.location.hostname.includes('setteny.cl');
+    
     // Validación y envío del formulario
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
             // Validar el formulario
             if (!contactForm.checkValidity()) {
+                event.preventDefault();
                 event.stopPropagation();
                 contactForm.classList.add('was-validated');
                 return;
             }
+            
+            // Si estamos en Netlify, permitir el envío nativo del formulario
+            if (isNetlify) {
+                // No prevenir el comportamiento predeterminado
+                // Mostrar mensaje de carga
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = 'Enviando...';
+                return true;
+            }
+            
+            // Si no estamos en Netlify, usar AJAX para enviar el formulario
+            event.preventDefault();
             
             // Recopilar datos del formulario
             const formData = {
@@ -29,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Enviando...';
             
-            // Enviar datos al servidor
-            fetch('send_email_phpmailer.php', {
+            // Enviar datos al servidor local para pruebas
+            fetch('send_email.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

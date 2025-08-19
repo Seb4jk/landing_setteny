@@ -461,25 +461,6 @@
             });
         });
 
-        // Validación de formulario
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            const nombre = document.getElementById("nombre").value.trim();
-            const correo = document.getElementById("correo").value.trim();
-
-            if (nombre === "" || correo === "") {
-                alert("Por favor completa los campos obligatorios.");
-                return;
-            }
-            if (!correo.includes("@")) {
-                alert("Por favor ingresa un correo válido.");
-                return;
-            }
-
-            alert("Gracias, tu mensaje fue enviado correctamente.");
-            this.reset();
-        });
-
         // Animación de tarjetas (fade-in con delay en cascada)
         const cards = document.querySelectorAll('#negocio .card');
 
